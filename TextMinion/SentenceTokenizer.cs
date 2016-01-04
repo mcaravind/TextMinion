@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace TextMinion
 {
-    class SentenceTokenizer
+    public class SentenceTokenizer
     {
+        public List<string> GetSentences(string text)
+        {
+            return new List<string>();
+        }
     }
 }
