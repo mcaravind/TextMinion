@@ -5,14 +5,14 @@ using TextMinion;
 namespace TextMinion.Test
 {
     [TestClass]
-    public class UnitTest1
+    public class SentenceTokenizerTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void VerifyParseForTwoSentences()
         {
             SentenceTokenizer st = new SentenceTokenizer();
             var sentences = st.GetSentences("This is a test sentence. In addition there is a second sentence.");
-            Assert.AreEqual(sentences.Count, 0);
+            Assert.AreEqual(sentences.Count, 2);
         }
     }
 }
