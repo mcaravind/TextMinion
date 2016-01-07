@@ -8,7 +8,9 @@ namespace TextMinion
 {
     public class SentenceTokenizer
     {
-        static string[] knownAbbreviations = new string[] { "etc.", "mr.", "mrs.", "vs." };
+        static string[] knownAbbreviations = new string[] { "etc.", "mr.", "mrs.", "vs.","e.g." };
+
+        
         public List<string> GetSentences(string input)
         {
             List<string> result = new List<string>();
@@ -48,6 +50,13 @@ namespace TextMinion
                         if (knownAbbreviations.Any(x => sb.ToString().EndsWith(x)))
                         {
                             //just an abbreviation, move to next
+                        }
+                        else if (input.CharAt(i-1)=='e')
+                        {
+                            if (input.CharAt(i+1)=='g'&&input.CharAt(i+2)=='.')
+                            {
+                                //encountered e.g., move to next
+                            }
                         }
                         else if (currWord.Length <= 4)
                         {
