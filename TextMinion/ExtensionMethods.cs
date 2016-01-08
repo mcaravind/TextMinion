@@ -11,7 +11,7 @@ namespace TextMinion
         public static char CharAt(this string input, int i)
         {
             char c = Char.MinValue;
-            if (i < input.Length)
+            if (i < input.Length && i>=0)
             {
                 c = input[i];
             }

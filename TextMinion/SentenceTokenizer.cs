@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace TextMinion
 {
-    public class SentenceTokenizer
+    public static class SentenceTokenizer
     {
         static string[] knownAbbreviations = new string[] { "etc.", "mr.", "mrs.", "vs.","e.g." };
 
         
-        public List<string> GetSentences(string input)
+        public static List<string> GetSentences(string input)
         {
             List<string> result = new List<string>();
             StringBuilder sb = new StringBuilder();
@@ -51,12 +51,9 @@ namespace TextMinion
                         {
                             //just an abbreviation, move to next
                         }
-                        else if (input.CharAt(i-1)=='e')
+                        else if (input.CharAt(i-1)=='e'&&input.CharAt(i+1)=='g'&&input.CharAt(i+2)=='.')
                         {
-                            if (input.CharAt(i+1)=='g'&&input.CharAt(i+2)=='.')
-                            {
-                                //encountered e.g., move to next
-                            }
+                            //abbreviation e.g. move to next
                         }
                         else if (currWord.Length <= 4)
                         {
