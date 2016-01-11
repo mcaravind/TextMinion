@@ -14,5 +14,14 @@ namespace TextMinion.Test
             var wordList = WordTokenizer.GetWords(input);
             Assert.IsTrue(wordList.Count>0);
         }
+
+        [TestMethod]
+        public void VerifyComplexSentence()
+        {
+            string input =
+                "They have a lot more software in the works, such as Cassanda, MongoDB and Spark [1]. It's a push to have good software support for the IBM LinuxONE machine [2], essentially an IBM z Systems (z13) mainframe that will only run Linux on KVM (i.e. without expensive z/OS or z/VM 'legacy')";
+            var wordlist = WordTokenizer.GetWords(input);
+            Assert.IsTrue(wordlist.Contains("z13"));
+        }
     }
 }
