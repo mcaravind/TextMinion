@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="SentenceTokenizerTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StemmerTest.cs" />
     <Compile Include="WordTokenizerTest.cs" />
   </ItemGroup>
   <ItemGroup>
