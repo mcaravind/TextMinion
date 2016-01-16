@@ -10,9 +10,9 @@ namespace TextMinion
     public static class WordTokenizer
     {
         enum CharState { InWord,OutOfWord}
-        public static IEnumerable<string> GetWords(string input)
+        public static List<string> GetWords(string input)
         {
-            var wordList = new List<string>();
+            List<string> wordList = new List<string>();
             CharState charState = CharState.OutOfWord;
             string thisWord = string.Empty;
             for (int i = 0; i < input.Length; i++)
