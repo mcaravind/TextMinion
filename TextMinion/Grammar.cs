@@ -12,6 +12,12 @@ namespace TextMinion
         {
             //first get the list of words
             List<string> wordList = WordTokenizer.GetWords(sentence);
+            //
+        }
+
+        static void CKY(List<string> wordList)
+        {
+            
         }
     }
 }
