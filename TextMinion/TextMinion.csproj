@@ -44,6 +44,7 @@
     <Compile Include="Globals.cs" />
     <Compile Include="Grammar.cs" />
     <Compile Include="Model\BinaryRule.cs" />
+    <Compile Include="Model\BinaryTreeNode.cs" />
     <Compile Include="Model\Symbol.cs" />
     <Compile Include="Parser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
