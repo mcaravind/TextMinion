@@ -1,5 +1,5 @@
 # TextMinion
 
-Just like Solr helps search across lots of documents, TextMinion helps perform Natural Language Processing across a large collection of documents.
+TextMinion.NET is to NLP what Solr is to full text search. Solr inverts documents to get a mapping from the keyword to the document. TextMinion.NET inverts documents to extract NLP primitives, and will get mappings from these primitives to the source documents.
 
 Proposed features: Word histograms, Phrase parsing, Named Entity recognition, Relationship extraction
